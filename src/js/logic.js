@@ -1,10 +1,7 @@
 export class Character {
-  constructor(name, type, str, int, char) {
+  constructor(name, type) {
     this.name = name;
     this.type = type;
-    this.str = str;
-    this.int = int;
-    this.char = char;
   };
 
   name;
@@ -15,11 +12,17 @@ export class Character {
     return Math.floor(this.xp / 100)
   }
 
-  // get str() { }
+  get str() {
+    return Math.floor(this.xp / 100)
+  }
 
-  // get int() { }
+  get int() {
+    return Math.floor(this.xp / 100)
+  }
 
-  // get char() { }
+  get char() {
+    return Math.floor(this.xp / 100)
+  }
 
   addXP(xp) {
     this.xp += xp;
