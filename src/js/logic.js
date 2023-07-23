@@ -15,7 +15,7 @@ export class Character {
    * @param {string} name Characters name
    * @param {string} type Characters type ie Warrior, Mage, Rogue
    * 
-   * @example 
+   * @example const char = new Character("Bob", "Warrior")
    */
   constructor(name, type) {
     this.name = name;
@@ -44,6 +44,17 @@ export class Character {
     return char
   }
 
+  swingWeapon() {
+    this.weaponSwings++
+  }
+
+  travelStealthed() {
+    this.distanceStealthed++
+  }
+
+  castSpell() {
+    this.spellCasts++
+  }
 
   addXP(xp) {
     this.xp += xp;

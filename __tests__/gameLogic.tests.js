@@ -74,6 +74,26 @@ describe("Character", () => {
     expect(char.distanceStealthed).toBe(0)
   })
 
+  it("should add to weaponSwings every time swingWeapon is called", () => {
+    const char = new Character("Bob")
+    char.swingWeapon()
+    char.swingWeapon()
+    expect(char.weaponSwings).toBe(2)
+  })
+
+  it("should add to spellCasts every time castSpell is called", () => {
+    const char = new Character("Bob")
+    char.castSpell()
+    char.castSpell()
+    expect(char.spellCasts).toBe(2)
+  })
+
+  it("should add to distanceStealthed every time travelStealthed is called", () => {
+    const char = new Character("Bob")
+    char.travelStealthed()
+    char.travelStealthed()
+    expect(char.distanceStealthed).toBe(2)
+  })
 })
 
 // "should change the Character class to Warrior if strength is more than 10"
