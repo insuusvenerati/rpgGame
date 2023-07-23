@@ -1,3 +1,5 @@
+import { Character } from "../src/js/logic";
+
 describe("Character", () => {
 
   it("should should create a character with a name, class and stats", () => {
