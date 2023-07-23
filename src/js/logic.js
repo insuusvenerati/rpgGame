@@ -12,10 +12,14 @@ export class Character {
   str = 0;
   int = 0;
   char = 0;
-  xp = 0;
+  xp = 100;
 
-  addXP() {
-    this.xp = this.xp + 100;
+  get level() {
+    return Math.floor(this.xp / 100)
+  }
+
+  addXP(xp) {
+    this.xp += xp;
   }
 
 }
