@@ -43,8 +43,21 @@ export class Character {
 
   get type() {
     const stats = { str: this.str, int: this.int, char: this.char }
+    const highestStat = Object.keys(stats).reduce((a, b) => stats[a] > stats[b] ? a : b)
+    switch (highestStat) {
+      case "str":
+        return "Warrior"
+      case "int":
+        return "Mage"
+      case "char":
+        return "Rogue"
+      default:
+        break;
+    }
+  }
 
-    return Object.keys(stats).reduce((a, b) => stats[a] > stats[b] ? a : b)
+  get health() {
+    return Math.floor(this.xp / 2)
   }
 
   swingWeapon() {

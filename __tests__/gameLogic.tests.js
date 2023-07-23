@@ -94,18 +94,17 @@ describe("Character", () => {
     expect(char.distanceStealthed).toBe(2)
   })
 
-  it("should return the highest stat", () => {
-    const char = new Character("Bob")
-    const item = new Item("Test Item", 100)
-    char.addItem(item)
-    expect(char.type).toBe("str")
-  })
-
   it("should turn the type as Warrior if str is the highest stat", () => {
     const char = new Character("Bob")
     const item = new Item("Test Item", 100)
     char.addItem(item)
     expect(char.type).toBe("Warrior")
+  })
+
+  it("should return their health as experience/2", () => {
+    const char = new Character("Bob")
+    char.addXP(200)
+    expect(char.health).toBe(150)
   })
 })
 
