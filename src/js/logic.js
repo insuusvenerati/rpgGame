@@ -7,6 +7,8 @@ export class Character {
     this.char = char;
   }
 
+  addXP() { }
+
   name;
   type;
   str = 0;
