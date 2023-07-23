@@ -67,8 +67,16 @@ describe("Character", () => {
     expect(char.char).toBe(2)
   })
 
+  it("should create a character with initially no training modifiers", () => {
+    const char = new Character("Bob")
+    expect(char.weaponSwings).toBe(0)
+    expect(char.spellCasts).toBe(0)
+    expect(char.distanceStealthed).toBe(0)
+  })
 
 })
+
+// "should change the Character class to Warrior if strength is more than 10"
 // Character class changes depending on amount of each skill
 
 describe("Item", () => {
