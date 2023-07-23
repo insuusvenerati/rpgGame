@@ -2,6 +2,9 @@ export class Character {
   name;
   type;
   xp = 100;
+  weaponSwings = 0;
+  spellCasts = 0;
+  distanceStealthed = 0;
 
   /**
    * @type {Item[]}
