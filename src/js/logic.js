@@ -7,6 +7,7 @@ export class Character {
   name;
   type;
   xp = 100;
+  inventory = [];
 
   get level() {
     return Math.floor(this.xp / 100)
