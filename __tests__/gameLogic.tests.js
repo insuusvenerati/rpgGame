@@ -51,13 +51,23 @@ describe("Character", () => {
     expect(char.inventory).toEqual([])
   })
 
+  it("should take in an item from addItem method", () => {
+    const char = new Character("Bob", "Warrior")
+    const newItem = new Item("Sword", 3, 1, 1)
+    char.addItem(newItem)
+    expect(char.inventory[0].name).toBe("Sword")
+  })
+
 })
 
 
 describe("Item", () => {
   it("should create a new item with initial stats", () => {
-    const item = new Item("Sword");
-
+    const item = new Item("Sword", 0, 0, 0);
+    expect(item.name).toBe("Sword")
+    expect(item.str).toBe(0)
+    expect(item.int).toBe(0)
+    expect(item.char).toBe(0)
   })
 })
 

@@ -25,6 +25,7 @@ export class Character {
     return this.level
   }
 
+
   addXP(xp) {
     this.xp += xp;
   }
