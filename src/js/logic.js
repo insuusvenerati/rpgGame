@@ -5,9 +5,7 @@ export class Character {
     this.str = str;
     this.int = int;
     this.char = char;
-  }
-
-  addXP() { }
+  };
 
   name;
   type;
@@ -15,5 +13,9 @@ export class Character {
   int = 0;
   char = 0;
   xp = 0;
+
+  addXP() {
+    this.xp = this.xp + 100;
+  }
 
 }
