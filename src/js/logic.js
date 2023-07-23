@@ -2,8 +2,18 @@ export class Character {
   name;
   type;
   xp = 100;
+
+  /**
+   * @type {Item[]}
+   */
   inventory = [];
 
+  /**
+   * @param {string} name Characters name
+   * @param {string} type Characters type ie Warrior, Mage, Rogue
+   * 
+   * @example 
+   */
   constructor(name, type) {
     this.name = name;
     this.type = type;
@@ -14,15 +24,21 @@ export class Character {
   }
 
   get str() {
-    return this.level
+    let str = this.level
+    this.inventory.forEach(item => str = str + item.str)
+    return str
   }
 
   get int() {
-    return this.level
+    let int = this.level
+    this.inventory.forEach(item => int = int + item.int)
+    return int
   }
 
   get char() {
-    return this.level
+    let char = this.level
+    this.inventory.forEach(item => char = char + item.char)
+    return char
   }
 
 

@@ -2,19 +2,32 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const ESLintPlugin = require('eslint-webpack-plugin');
+const TerserPlugin = require("terser-webpack-plugin");
 
+/**
+ * @type {import("webpack").Configuration}
+ */
 module.exports = {
   entry: './src/index.js',
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist')
   },
-  devServer: {                
-    contentBase: './dist'      
-  },                    
   devtool: 'eval-source-map',
+  devServer: {
+    static: {
+      directory: "./dist"
+    },
+    compress: true
+  },
+  optimization: {
+    minimize: true,
+    minimizer: [new TerserPlugin({
+      extractComments: true
+    })]
+  },
   plugins: [
-    new ESLintPlugin(),
+    // new ESLintPlugin(),
     new CleanWebpackPlugin({
       verbose: true
     }),

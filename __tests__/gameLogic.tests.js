@@ -66,8 +66,10 @@ describe("Character", () => {
     expect(char.int).toBe(2)
     expect(char.char).toBe(2)
   })
-})
 
+
+})
+// Character class changes depending on amount of each skill
 
 describe("Item", () => {
   it("should create a new item with initial stats", () => {
@@ -79,5 +81,5 @@ describe("Item", () => {
   })
 })
 
-// Items as a new class, Inventory as a property in Character class;
+
 
