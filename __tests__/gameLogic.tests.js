@@ -58,6 +58,14 @@ describe("Character", () => {
     expect(char.inventory[0].name).toBe("Sword")
   })
 
+  it("should have increased stats for each item", () => {
+    const char = new Character("Bob", "Warrior")
+    const newItem = new Item("Sword", 3, 1, 1)
+    char.addItem(newItem)
+    expect(char.str).toBe(4)
+    expect(char.int).toBe(2)
+    expect(char.char).toBe(2)
+  })
 })
 
 

@@ -30,6 +30,9 @@ export class Character {
     this.xp += xp;
   }
 
+  addItem(item) {
+    this.inventory.push(item)
+  }
 }
 
 export class Item {
