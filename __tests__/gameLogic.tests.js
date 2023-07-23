@@ -101,7 +101,12 @@ describe("Character", () => {
     expect(char.type).toBe("str")
   })
 
-
+  it("should turn the type as Warrior if str is the highest stat", () => {
+    const char = new Character("Bob")
+    const item = new Item("Test Item", 100)
+    char.addItem(item)
+    expect(char.type).toBe("Warrior")
+  })
 })
 
 // "should change the Character class to Warrior if strength is more than 10"
