@@ -1,4 +1,4 @@
-import { Character } from "../src/js/logic";
+import { Character, Item } from "../src/js/logic";
 
 describe("Character", () => {
 
@@ -54,7 +54,12 @@ describe("Character", () => {
 })
 
 
+describe("Item", () => {
+  it("should create a new item with initial stats", () => {
+    const item = new Item("Sword");
 
+  })
+})
 
 // Items as a new class, Inventory as a property in Character class;
 
