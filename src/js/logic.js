@@ -4,6 +4,7 @@ export class Character {
   weaponSwings = 0;
   spellCasts = 0;
   distanceStealthed = 0;
+  health = 100;
 
   /**
    * @type {Item[]}
@@ -57,7 +58,9 @@ export class Character {
   }
 
   get health() {
-    return Math.floor(this.xp / 2)
+    healthLevel = this.level
+    healthLevel.forEach()
+    // return Math.floor(this.xp / 2)
   }
 
   swingWeapon() {
@@ -88,6 +91,4 @@ export class Item {
     this.int = int || 0;
     this.char = char || 0;
   }
-
-  name;
 }
