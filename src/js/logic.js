@@ -41,6 +41,11 @@ export class Character {
     return char
   }
 
+  get type() {
+    const stats = { str: this.str, int: this.int, char: this.char }
+
+    return Object.keys(stats).reduce((a, b) => stats[a] > stats[b] ? a : b)
+  }
 
   swingWeapon() {
     this.weaponSwings++
@@ -64,15 +69,12 @@ export class Character {
 }
 
 export class Item {
-  name;
-  str = 0;
-  int = 0;
-  char = 0;
-
   constructor(name, str, int, char) {
     this.name = name;
-    this.str = str;
-    this.int = int;
-    this.char = char;
+    this.str = str || 0;
+    this.int = int || 0;
+    this.char = char || 0;
   }
+
+  name;
 }

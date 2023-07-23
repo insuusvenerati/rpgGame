@@ -94,12 +94,14 @@ describe("Character", () => {
     expect(char.distanceStealthed).toBe(2)
   })
 
-  it("should update type based on highest stat", () => {
+  it("should return the highest stat", () => {
     const char = new Character("Bob")
     const item = new Item("Test Item", 100)
     char.addItem(item)
-    expect(char.type).toBe("Warrior")
+    expect(char.type).toBe("str")
   })
+
+
 })
 
 // "should change the Character class to Warrior if strength is more than 10"
