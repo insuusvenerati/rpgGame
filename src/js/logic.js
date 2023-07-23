@@ -9,14 +9,17 @@ export class Character {
 
   name;
   type;
-  str = 0;
-  int = 0;
-  char = 0;
   xp = 100;
 
   get level() {
     return Math.floor(this.xp / 100)
   }
+
+  // get str() { }
+
+  // get int() { }
+
+  // get char() { }
 
   addXP(xp) {
     this.xp += xp;

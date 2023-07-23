@@ -25,5 +25,13 @@ describe("Character", () => {
     char.addXP(300)
     expect(char.level).toBe(4)
   })
+
+  it("should increase stats for every level", () => {
+    const char = new Character("Bob", "Warrior", 0, 0, 0)
+    char.addXP(200)
+    expect(char.str).toBe(3)
+    expect(char.int).toBe(3)
+    expect(char.char).toBe(3)
+  })
 })
 
