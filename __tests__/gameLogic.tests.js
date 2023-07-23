@@ -9,6 +9,13 @@ describe("Character", () => {
     expect(char.str).toBe(0)
     expect(char.int).toBe(0)
     expect(char.char).toBe(0)
+    expect(char.xp).toBe(0)
   })
 
+  it("should add to xp", () => {
+    const newChar = new Character("Bob", "Warrior", 0, 0, 0);
+    newChar.addXP(100);
+    expect(newChar.xp).toBe(100)
+  })
 })
+

@@ -12,4 +12,6 @@ export class Character {
   str = 0;
   int = 0;
   char = 0;
+  xp = 0;
+
 }
