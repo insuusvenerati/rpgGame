@@ -1,6 +1,5 @@
 export class Character {
   name;
-  type;
   xp = 100;
   weaponSwings = 0;
   spellCasts = 0;
@@ -13,13 +12,11 @@ export class Character {
 
   /**
    * @param {string} name Characters name
-   * @param {string} type Characters type ie Warrior, Mage, Rogue
    * 
-   * @example const char = new Character("Bob", "Warrior")
+   * @example const char = new Character("Bob")
    */
-  constructor(name, type) {
+  constructor(name) {
     this.name = name;
-    this.type = type;
   };
 
   get level() {
@@ -43,6 +40,7 @@ export class Character {
     this.inventory.forEach(item => char = char + item.char)
     return char
   }
+
 
   swingWeapon() {
     this.weaponSwings++
